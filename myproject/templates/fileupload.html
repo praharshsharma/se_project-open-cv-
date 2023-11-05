@@ -1,0 +1,5 @@
+<form method="POST" action="upload_pdf" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" id="file" name="files"/>
+    <input type="submit">
+</form>

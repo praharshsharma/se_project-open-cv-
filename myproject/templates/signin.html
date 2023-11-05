@@ -1,0 +1,15 @@
+<form method="POST" action="signin" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="fname">Roll:</label>
+    <input type="text" name="fname">
+    <br>
+
+    <label for="pass">Password:</label>
+    <input type="password" name="pass">
+
+    <br>
+    <input type="submit">
+
+</form>
+
+<p>{{message}}</p>

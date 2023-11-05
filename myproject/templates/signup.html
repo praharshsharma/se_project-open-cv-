@@ -1,0 +1,37 @@
+<form method="POST" action="signup" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="fname">Name:</label>
+    <input type="text" name="fname">
+    <br>
+    <label for="roll">Roll:</label>
+    <input type="text" name="roll">
+    <br>
+    <label for="branch">Branch</label>
+    <select name="branch" id="branch">
+        <option value="">--select</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+    </select>
+    <br>
+    <label for="division">Division</label>
+    <select name="division" id="division">
+        <option value="">--select</option>
+        <option value="1">Batch 1</option>
+        <option value="2">Batch 2</option>
+    </select>
+
+    <br>
+
+    <label for="pass">Password:</label>
+    <input type="password" name="pass">
+
+    <br>
+    <label for="files">Timetable</label>
+    <input type="file" id="file" name="files"/>
+    <br>
+    <input type="submit">
+
+</form>
+
+<p>{{message}}</p>
+

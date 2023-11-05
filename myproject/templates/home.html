@@ -1,0 +1,44 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeBunks</title>
+    <link rel="stylesheet" href="{% static 'dycalendar.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <h1>Welcome {{name}}!!</h1>
+    <section>
+        <div class="box">
+            <div class="container">
+                <div id="dycalendar"></div>
+            </div>
+        </div>
+        <div class="subcards">
+        </div>
+        <div id="popup" class="hidden">
+            <div class="popup-content">
+                <ul id="subjectList">
+                </ul>
+                <button id="closePopup">Close</button>
+            </div>
+        </div>
+    </section>
+    <script src="{% static "dycalendar.js" %}"></script>
+    <script>
+        dycalendar.draw({
+            target: '#dycalendar',
+            type:'month', 
+            monthformat:'full',
+            highlighttargetdata: true,
+            prevnextbutton:'show'
+        })
+
+    </script>
+    <script src="{% static "home.js" %}"></script>
+</body>
+</html>
